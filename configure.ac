@@ -174,15 +174,10 @@ AC_CHECK_FUNCS([pow setlocale reallocarr reallocarray])
 
 AC_CONFIG_FILES(
 Makefile
-doc/Makefile
-examples/Makefile
-examples/fastwc/Makefile
-examples/manual/Makefile
 po/Makefile.in
 src/libfl.pc
 src/Makefile
 tools/Makefile
-tests/Makefile
 )
 
 AC_OUTPUT

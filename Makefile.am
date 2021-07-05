@@ -46,10 +46,7 @@ dist_noinst_SCRIPTS = \
 
 SUBDIRS = \
 	src \
-	doc \
-	examples \
 	po \
-	tests \
 	tools
 
 # Convenience targets to build libfl only
