@@ -37,6 +37,16 @@ AC_CONFIG_MACRO_DIR([m4])
 SHARED_VERSION_INFO="2:0:0"
 AC_SUBST(SHARED_VERSION_INFO)
 
+AC_CANONICAL_HOST
+AC_CANONICAL_BUILD
+# Allow the user to override the flags for
+# our build compiler if desired.
+if test x"${build}" = x"${host}" ; then
+  CFLAGS_FOR_BUILD=${CFLAGS_FOR_BUILD-${CFLAGS}}
+  CXXFLAGS_FOR_BUILD=${CXXFLAGS_FOR_BUILD-${CXXFLAGS}}
+  LDFLAGS_FOR_BUILD=${LDFLAGS_FOR_BUILD-${LDFLAGS}}
+fi
+
 # checks for programs
 
 AM_GNU_GETTEXT([external])
